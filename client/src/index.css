@@ -1,3 +1,16 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+* {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+

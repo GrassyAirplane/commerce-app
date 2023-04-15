@@ -1,0 +1,45 @@
+.section-crud {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-crud {
+    border: 1px solid black;
+    margin: 1rem;
+}
+
+.thead-crud {
+    font-weight: 700;
+}
+
+.td-product {
+    width: 10rem;
+    text-align: left;
+}
+
+.td-price {
+    width: 2rem;
+    text-align: center;
+}
+
+.td-affiliate {
+    width: 2rem;
+    text-align: center;
+}
+
+.button-logout {
+    margin: .5rem;
+    cursor: pointer;
+    border: #D1D1D4;
+
+    padding: .5rem 1rem .5rem 1rem;
+    color: rgb(197,197,197);
+    /* color: white; */
+    background-color: rgb(51,51,51);
+}
+
