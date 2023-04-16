@@ -1,0 +1,50 @@
+.span-crud:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.span-crud-edit:hover {
+    color: orange;
+}
+
+.span-crud-delete:hover {
+    color: red;
+}
+
+.span-crud-save:hover {
+    color: green;
+}
+
+.input-row-edit {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+    max-width: 9rem;
+	/* border-bottom: 2px solid #D1D1D4; */
+    /* border-bottom: 1px solid black; */
+	background: none;
+	font-weight: 700;
+	transition: .2s;
+}
+
+.input-row-edit-price {
+    border: none;
+    /* border: 1px solid black; */
+    padding: 0;
+    max-width: 2.5rem;
+	/* border-bottom: 2px solid #D1D1D4; */
+    border-bottom: 1px solid black;
+	background: none;
+	font-weight: 700;
+	transition: .2s;
+}
+
+.input-row-edit-link {
+    border: none;
+    padding: 0;
+    max-width: 2rem;
+    border-bottom: 1px solid black;
+	background: none;
+	font-weight: 700;
+	transition: .2s;
+}

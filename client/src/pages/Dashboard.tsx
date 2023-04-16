@@ -8,7 +8,7 @@ const Dashboard = () => {
     const loggedIn = useSelector((state: RootState) => state.login.loggedIn)    
     return (
         <>
-            {!loggedIn ? <Login />: <Crud />}
+            {loggedIn ? <Crud /> : <Login />}
         </>
     )
 }

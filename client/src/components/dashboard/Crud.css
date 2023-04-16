@@ -17,6 +17,14 @@
     font-weight: 700;
 }
 
+.th-product {
+    padding-left: 1rem;
+}
+
+.th-crud {
+    border-bottom: 1px solid black;
+}
+
 .td-product {
     width: 10rem;
     text-align: left;
@@ -28,6 +36,16 @@
 }
 
 .td-affiliate {
+    min-width: 4rem;
+    text-align: center;
+}
+
+.td-edit {
+    min-width: 3.5rem;
+    text-align: center;
+}
+
+.td-delete {
     width: 2rem;
     text-align: center;
 }
