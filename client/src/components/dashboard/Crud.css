@@ -11,6 +11,7 @@
 .table-crud {
     border: 1px solid black;
     margin: 1rem;
+    min-width: 8rem;
 }
 
 .thead-crud {

@@ -1,9 +1,22 @@
 CREATE DATABASE commercedb;
 
+CREATE TABLE dashboard(
+    password VARCHAR(64)
+);
+
+INSERT INTO dashboard (password) VALUES ('test123');
+
+CREATE TABLE api_key(
+    personal_key VARCHAR(64)
+);
+
+INSERT INTO api_key (personal_key) VALUES ('asdfghjkl');
+
 CREATE TABLE product( 
     product_id SERIAL PRIMARY KEY,
     product_name VARCHAR(255),
-    product_price NUMERIC(10,2)
+    product_price NUMERIC(10,2),
+     product_affiliate_link VARCHAR(255)
 );
 
 CREATE TABLE customer(

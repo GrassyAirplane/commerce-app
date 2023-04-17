@@ -1,0 +1,54 @@
+/* .section-AddCrudRow {
+    max-width: 10rem;
+} */
+
+.td-add-row-first {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tr-add-row {
+    min-width: 8rem;
+}
+
+.td-add-row {
+    padding: 0;
+    border: 1px solid black;
+    padding: .2rem 0 .2rem 0;
+    border-right: none;
+}
+
+.td-add-row-button {
+    border-right: 1px solid black;
+    padding: 0 .5rem 0 .5rem;
+}
+
+
+.td-add-row-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input-add-row {
+    border: none;
+    margin-left: .5rem;
+	background: none;
+	font-weight: 700;
+	transition: .2s;
+
+    max-width: 9.5rem;
+}
+
+.input-add-row-link {
+    border: none;
+    margin-left: .5rem;
+	background: none;
+	font-weight: 700;
+	transition: .2s;
+
+    max-width: 6.5rem;
+}
+
+.table-add {
+    border-collapse: collapse;
+}

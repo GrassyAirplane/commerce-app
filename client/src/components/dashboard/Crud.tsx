@@ -4,6 +4,7 @@ import { RootState } from "../../store";
 import "./Crud.css"
 import { useEffect, useState } from "react";
 import CrudRow from "./CrudRow";
+import AddCrudRow from "./AddCrudRow";
 
 interface Product {
     product_id: number;
@@ -18,6 +19,9 @@ const Crud = () => {
 
     const [products, setProducts] = useState([])
     const api = sessionStorage.getItem("api");
+
+    // assuming products is an array of Product objects
+    const sortedProducts = products.sort((a: Product, b: Product) => a.product_id - b.product_id);
 
     const getProducts = async () => {
         try {
@@ -56,19 +60,22 @@ const Crud = () => {
     
     return (    
         <section className="section-crud">
+            <AddCrudRow onRefresh={onRefresh}/>
             <table className="table-crud">
                 <thead className="thead-crud">
                     <tr>
                         <th className="th-crud td-product th-product">Product</th>
                         <th className="th-crud td-price">Price</th>
                         <th className="th-crud td-affiliate">Affiliate</th>
+                        <th className="th-crud td-affiliate">Image</th>
                         <th className="th-crud td-edit">Edit</th>
                         <th className="th-crud td-delete">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((product: Product) => (
+                    {sortedProducts.map((product: Product) => (
                             <CrudRow 
+                                key={product.product_id}
                                 id = {product.product_id}
                                 product = {product.product_name}
                                 price = {product.product_price}
