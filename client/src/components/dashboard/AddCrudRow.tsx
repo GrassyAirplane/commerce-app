@@ -64,7 +64,7 @@ const AddCrudRow = (props: crudRow) => {
                     />
                 </td>
                 <td className="td-add-row">
-                    <input
+                    <input 
                     className="input-add-row-link"
                     placeholder="Image"
                     value={affiliate}

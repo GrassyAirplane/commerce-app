@@ -56,7 +56,7 @@ router.post("/product", async(req, res) => {
             return res.status(400).send("Invalid Api Key")
         }
 
-        const all_products = await pool.query("SELECT product_id, product_name, product_price, product_affiliate_link FROM product")
+        const all_products = await pool.query("SELECT product_id, product_name, product_price, product_affiliate_link, product_image_link FROM product")
         res.json(all_products["rows"])
     } catch (error) {
         console.error(error.message)
@@ -73,7 +73,7 @@ router.get("/product/:id", async(req, res) => {
             return res.status(400).send("Invalid Api Key")
         }
         const product = await pool.query (
-            "SELECT product_id, product_name, product_price FROM product WHERE product_id = $1" ,
+            "SELECT product_id, product_name, product_price, product_affiliate_link, product_image_link FROM product WHERE product_id = $1" ,
             [id]
         )
         res.json(product.rows)
@@ -91,13 +91,13 @@ router.post("/product/create", async(req, res) => {
             return res.status(400).send("Invalid Api Key")
         }
 
-        const { product_name, product_price, product_affiliate_link} = params
+        const { product_name, product_price, product_affiliate_link, product_image_link} = params
         if (!product_name || !product_price) {
             return res.status(400).send("Product name and price are required.")
         }
         const newProduct = await pool.query(
-            "INSERT INTO product (product_name, product_price, product_affiliate_link) VALUES($1, $2, $3) RETURNING *",
-            [product_name, product_price, product_affiliate_link]
+            "INSERT INTO product (product_name, product_price, product_affiliate_link, product_image_link VALUES($1, $2, $3, $4) RETURNING *",
+            [product_name, product_price, product_affiliate_link, product_image_link]
         )
         res.json(newProduct)
     } catch (error) {
@@ -135,10 +135,10 @@ router.put('/product/:id', async(req, res) => {
         if (!await validate_api_key(api_key)) {
             res.status(400).send("Invalid Api Key")
         }
-        const { product_name, product_price, product_affiliate_link } = params
+        const { product_name, product_price, product_affiliate_link, product_image_link } = params
         const updateProduct = await pool.query(
-            "UPDATE product SET product_name = $2, product_price = $3, product_affiliate_link = $4 WHERE product_id = $1",
-            [id, product_name, product_price, product_affiliate_link]
+            "UPDATE product SET product_name = $2, product_price = $3, product_affiliate_link = $4, product_image_link = $5 WHERE product_id = $1",
+            [id, product_name, product_price, product_affiliate_link, product_image_link]
         )
         res.json(updateProduct.rows)
     } catch (error) {

@@ -11,6 +11,7 @@ interface Product {
     product_name: string;
     product_price: number;
     product_affiliate_link: string;
+    product_image_link: string;
 }
 
 const Crud = () => {
@@ -80,6 +81,7 @@ const Crud = () => {
                                 product = {product.product_name}
                                 price = {product.product_price}
                                 affiliate= {product.product_affiliate_link}
+                                image = {product.product_image_link}
                                 onRefresh={onRefresh}
                             />
                         ))}

@@ -6,20 +6,24 @@ interface Product {
     product: string;
     price: number;
     affiliate: string;
+    image: string;
     onRefresh: () => void; 
 }
 
 
 const CrudRow = (props: Product) => {
     const affiliate = !!props.affiliate
+    const image = !!props.image
+
     const [edit, setEdit] = useState(false)
     const id = props.id
     const api = sessionStorage.getItem("api")
 
     // Update
-    const [product, setProduct] = useState('');
-    const [price, setPrice] = useState(0);
-    const [affiliateLink, setAffiliate] = useState('');
+    const [product, setProduct] = useState('')
+    const [price, setPrice] = useState(0)
+    const [affiliateLink, setAffiliate] = useState('')
+    const [imageLink, setImage] = useState('')
 
     const handleEditClick = () => {
         setEdit(!edit)
@@ -31,6 +35,7 @@ const CrudRow = (props: Product) => {
             const tempProduct = product.length == 0 ? props.product : product
             const tempPrice = price <= 0 ? props.price : price
             const tempAffiliate = affiliateLink.length == 0 ? props.affiliate : affiliateLink
+            const tempImage = imageLink.length == 0 ? props.image : imageLink
             
             const response = await fetch(process.env.DASHBOARDAPI + `/product/${id}`, {
                 method: "PUT",
@@ -40,7 +45,8 @@ const CrudRow = (props: Product) => {
                     params: {
                         "product_name": tempProduct,
                         "product_price": tempPrice,
-                        "product_affiliate_link": tempAffiliate
+                        "product_affiliate_link": tempAffiliate,
+                        "product_image_link": tempImage
                     }
                 })
             })
@@ -89,7 +95,8 @@ const CrudRow = (props: Product) => {
             onChange = {(e) => setPrice(parseInt(e.target.value))}></input> : props.price}</td>
             <td className="td-affiliate">{edit ? <input className="input-row-edit-link" value={affiliateLink} 
             onChange = {(e) => setAffiliate(e.target.value)}></input>: affiliate ? <a href={props.affiliate} target="_blank">Present</a>: "N/A"}</td>
-            <td className="td-image"></td>
+            <td className="td-image">{edit ? <input className="input-row-edit-link" value={imageLink} 
+            onChange = {(e) => setImage(e.target.value)}></input>: image ? <a href={props.image} target="_blank">Present</a>: "N/A"}</td>
             <td className="td-edit"><span onClick={handleEditClick} className="span-crud span-crud-edit">{edit ? "Cancel" : "Edit"}</span></td>
             <td className="td-delete">{edit ? <span onClick={handleSaveClick} className="span-crud span-crud-save">Save</span> : <span onClick={handleDeleteClick} className="span-crud span-crud-delete">Delete</span>}</td>
         </tr>

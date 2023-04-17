@@ -16,7 +16,8 @@ CREATE TABLE product(
     product_id SERIAL PRIMARY KEY,
     product_name VARCHAR(255),
     product_price NUMERIC(10,2),
-     product_affiliate_link VARCHAR(255)
+    product_affiliate_link VARCHAR(255),
+    product_image_link VARCHAR(255)
 );
 
 CREATE TABLE customer(
