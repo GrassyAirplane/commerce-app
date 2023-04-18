@@ -1,10 +1,25 @@
-.product-card {
+.article-product-card {
     
 }
 
-.product-card .product-img {
-    position: relative;
-    max-width: 100%;
+.product-img {
     border-radius: 3rem;
     border: 2px solid #483c34;
+
+    min-width: 11rem;
+    min-height: 15rem;
+    width: 11rem;
+    height: 15rem;
+    /* height: 100%;
+    width: 100%; */
+    object-fit: contain;
+}
+
+.a-product-card {
+    color: black;
+    text-decoration: none;
+}
+
+.a-product-card {
+    cursor: pointer;
 }

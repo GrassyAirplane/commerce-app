@@ -9,6 +9,7 @@ const AddCrudRow = (props: crudRow) => {
     const [product, setProduct] = useState('');
     const [price, setPrice] = useState('');
     const [affiliate, setAffiliate] = useState('');
+    const [image, setImage] = useState('');
 
     const api = sessionStorage.getItem("api")
 
@@ -22,7 +23,8 @@ const AddCrudRow = (props: crudRow) => {
                     params: {
                         "product_name": product,
                         "product_price": price,
-                        "product_affiliate_link": affiliate
+                        "product_affiliate_link": affiliate,
+                        "product_image_link": image
                     }
                 })
             })
@@ -32,6 +34,7 @@ const AddCrudRow = (props: crudRow) => {
         setProduct('')
         setPrice('')
         setAffiliate('')
+        setImage('')
         props.onRefresh()
     };
 
@@ -67,8 +70,8 @@ const AddCrudRow = (props: crudRow) => {
                     <input 
                     className="input-add-row-link"
                     placeholder="Image"
-                    value={affiliate}
-                    onChange={(e) => setAffiliate(e.target.value)}
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
                     />
                 </td>
                 <td className="td-add-row td-add-row-button" onClick={handleAddClick}>

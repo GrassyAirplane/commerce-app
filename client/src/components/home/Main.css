@@ -1,6 +1,8 @@
 .section-main { 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
     text-align: center;
 
     padding: 0 16vw 0 16vw;
