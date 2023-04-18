@@ -1,12 +1,11 @@
 import LeftNavbar from "../components/home/LeftNavbar"
 import RightNavbar from "../components/home/RightNavbar"
-import blog from "../assets/icons/blog-read.svg"
+import shop from "../assets/icons/shop.svg"
 
 const Feed = () => {
     return (
         <>
-            <LeftNavbar />
-            <RightNavbar icon={blog}/>
+            <RightNavbar icon={shop} link="/home"/>
         </>
     )
 }

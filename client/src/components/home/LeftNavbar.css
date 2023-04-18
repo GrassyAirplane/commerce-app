@@ -14,15 +14,17 @@
     list-style: none;
 
     height: 100%;
-    justify-content: center;
+    /* justify-content: center; */
 
     /*  */
-    padding-left: 5vw;
+    padding-left: 5.5vw;
     margin: 0;
     gap: 12%;
 
     /* Font */
     font-size: 1rem;
+    list-style: none;
+    padding-top: 4vw;
 }
 
 .ul-left-navbar li:hover {

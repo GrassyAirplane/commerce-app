@@ -9,7 +9,7 @@
 }
     
 .ul-right-navbar {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     list-style: none;
 
@@ -17,11 +17,14 @@
     width: 100%;
     justify-content: center;
 
-    /*  */
+
     text-align: left;
-    padding-right: 5vw;
+    padding-right: 8vw;
     margin: 0;
-    gap: 14%;
+    gap: 14%; */
+    list-style: none;
+    padding-top: 4vw;
+    padding-right: 6vw;
 }
 
 .ul-right-navbar li:hover {
@@ -31,3 +34,4 @@
 .aside-right-icon {
     height: 3rem;
 }
+
