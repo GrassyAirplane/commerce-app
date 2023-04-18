@@ -28,6 +28,10 @@ body {
   min-height: 100vh;
 }
 
+main {
+  height: 100vh;
+}
+
 /*Attaching font family*/
 .aside-left-navbar {
   font-family: var(--font-family);

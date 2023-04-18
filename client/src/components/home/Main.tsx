@@ -1,6 +1,8 @@
+import "./Main.css"
+
 const Main = () => {
     return (
-        <section className="main">
+        <section className="section-main">
             <div>
                 Div 1
             </div>
