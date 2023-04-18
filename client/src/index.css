@@ -1,7 +1,17 @@
 :root {
+  --font-family: 'Shippori Antique', serif;
+}
+
+@font-face {
+  font-family: 'Shippori Antique';
+  src: url('../src/assets/fonts/ShipporiAntique-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
+  font-family: var(--font-family);
   margin: 0;
 }
 
@@ -18,3 +28,7 @@ body {
   min-height: 100vh;
 }
 
+/*Attaching font family*/
+.aside-left-navbar {
+  font-family: var(--font-family);
+}

@@ -5,6 +5,7 @@ import "./Crud.css"
 import { useEffect, useState } from "react";
 import CrudRow from "./CrudRow";
 import AddCrudRow from "./AddCrudRow";
+import LeftNavbar from "../home/LeftNavbar";
 
 interface Product {
     product_id: number;
@@ -61,6 +62,7 @@ const Crud = () => {
     
     return (    
         <section className="section-crud">
+            <LeftNavbar />
             <AddCrudRow onRefresh={onRefresh}/>
             <table className="table-crud">
                 <thead className="thead-crud">

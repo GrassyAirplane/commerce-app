@@ -1,0 +1,33 @@
+.aside-right-navbar {
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+    
+.ul-right-navbar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+    /*  */
+    text-align: left;
+    padding-right: 5vw;
+    margin: 0;
+    gap: 14%;
+}
+
+.ul-right-navbar li:hover {
+    cursor: pointer;
+}
+
+.aside-right-icon {
+    height: 3rem;
+}

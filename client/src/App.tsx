@@ -3,6 +3,7 @@ import './pages/Dashboard'
 import Dashboard from './pages/Dashboard'
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
+import Feed from './pages/Feed'
 
 
 const router = createBrowserRouter(
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
       {/* <Route index element={<Home />}/> */}
       <Route path="home" element={<Home />}/>
       <Route path="dashboard" element={<Dashboard />}/>
+      <Route path="feed" element={<Feed />}/>
     </Route>), {
       basename: ""
     }
