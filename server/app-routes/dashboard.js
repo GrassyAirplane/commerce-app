@@ -52,9 +52,9 @@ router.post("/login", async(req, res) => {
 router.post("/product", async(req, res) => {
     try {
         const { api_key, params } = req.body
-        if (!await validate_api_key(api_key)) {
-            return res.status(400).send("Invalid Api Key")
-        }
+        // if (!await validate_api_key(api_key)) {
+        //     return res.status(400).send("Invalid Api Key")
+        // }
 
         const all_products = await pool.query("SELECT product_id, product_name, product_price, product_affiliate_link, product_image_link FROM product")
         res.json(all_products["rows"])
@@ -96,7 +96,7 @@ router.post("/product/create", async(req, res) => {
             return res.status(400).send("Product name and price are required.")
         }
         const newProduct = await pool.query(
-            "INSERT INTO product (product_name, product_price, product_affiliate_link, product_image_link VALUES($1, $2, $3, $4) RETURNING *",
+            "INSERT INTO product (product_name, product_price, product_affiliate_link, product_image_link) VALUES($1, $2, $3, $4) RETURNING *",
             [product_name, product_price, product_affiliate_link, product_image_link]
         )
         res.json(newProduct)
