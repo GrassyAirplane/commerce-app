@@ -5,7 +5,8 @@ import shop from "../assets/icons/shop.svg"
 const Feed = () => {
     return (
         <>
-            <RightNavbar icon={shop} link="/home"/>
+            {/* <RightNavbar class="aside-right-icon-smaller" icon={shop} link="/home"/> */}
+            <LeftNavbar class="aside-right-icon-smaller" icon={shop} link="/home"/>
         </>
     )
 }

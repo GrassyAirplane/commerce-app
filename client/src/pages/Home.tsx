@@ -6,9 +6,7 @@ import Main from "../components/home/Main"
 const Home = () => {
     return (
         <main>
-            <LeftNavbar />
-            <RightNavbar icon={blog} link="/feed"/>
-
+            <LeftNavbar class="aside-right-icon" icon={blog} link="/feed"/>
             <Main />
         </main>
     )

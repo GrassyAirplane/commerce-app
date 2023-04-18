@@ -62,7 +62,6 @@ const Crud = () => {
     
     return (    
         <section className="section-crud">
-            <LeftNavbar />
             <AddCrudRow onRefresh={onRefresh}/>
             <table className="table-crud">
                 <thead className="thead-crud">

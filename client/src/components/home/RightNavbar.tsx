@@ -4,6 +4,7 @@ import "./RightNavbar.css"
 interface Icon {
     icon: string;
     link: string;
+    class: string;
 }
 
 const RightNavbar = (props: Icon) => {
@@ -12,7 +13,7 @@ const RightNavbar = (props: Icon) => {
         <aside className="aside-right-navbar">
             <ul className="ul-right-navbar">
                 <Link to={props.link}>
-                    <li><img className="aside-right-icon" src={props.icon} alt="Blog Icon" /></li>
+                    <li><img className={props.class} src={props.icon} alt="Blog Icon" /></li>
                 </Link>
             </ul>
         </aside>
