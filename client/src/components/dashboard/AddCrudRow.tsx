@@ -6,10 +6,11 @@ interface crudRow {
 }
 
 const AddCrudRow = (props: crudRow) => {
-    const [product, setProduct] = useState('');
-    const [price, setPrice] = useState('');
-    const [affiliate, setAffiliate] = useState('');
-    const [image, setImage] = useState('');
+    const [product, setProduct] = useState('')
+    const [price, setPrice] = useState('')
+    const [affiliate, setAffiliate] = useState('')
+    const [image, setImage] = useState('')
+    const [types, setTypes] = useState<string[]>([])
 
     const api = sessionStorage.getItem("api")
 
@@ -73,6 +74,22 @@ const AddCrudRow = (props: crudRow) => {
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
                     />
+                </td>
+                <td className="td-add-row td-add-row-button td-type">    
+                    <span onClick={() => {
+                    const radioSection = document.querySelector('.checkbox-section');
+                    radioSection?.classList.toggle('hidden');
+                    }}>Type</span>               
+                <div className="checkbox-section">
+                    <input type="checkbox" id="makeup-checkbox" name="product-type" value="makeup" />
+                    <label htmlFor="makeup-checkbox">Makeup</label>
+                    <input type="checkbox" id="fashion-checkbox" name="product-type" value="fashion" />
+                    <label htmlFor="fashion-checkbox">Fashion</label>
+                    <input type="checkbox" id="electronic-checkbox" name="product-type" value="electronic" />
+                    <label htmlFor="electronic-checkbox">Electronic</label>
+                    <input type="checkbox" id="trinket-checkbox" name="product-type" value="trinket" />
+                    <label htmlFor="trinket-checkbox">Trinket</label>
+                    </div>
                 </td>
                 <td className="td-add-row td-add-row-button" onClick={handleAddClick}>
                     Add
