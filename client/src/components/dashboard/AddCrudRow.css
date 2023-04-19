@@ -52,3 +52,26 @@
 .table-add {
     border-collapse: collapse;
 }
+
+.td-type {
+    text-align: center;
+    position: relative;
+}
+
+.hidden {
+    visibility: hidden;
+}
+  
+.checkbox-section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 7rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
