@@ -80,7 +80,7 @@ const AddCrudRow = (props: crudRow) => {
                     const radioSection = document.querySelector('.checkbox-section');
                     radioSection?.classList.toggle('hidden');
                     }}>Type</span>               
-                <div className="checkbox-section">
+                <div className="checkbox-section hidden">
                     <input type="checkbox" id="makeup-checkbox" name="product-type" value="makeup" />
                     <label htmlFor="makeup-checkbox">Makeup</label>
                     <input type="checkbox" id="fashion-checkbox" name="product-type" value="fashion" />
