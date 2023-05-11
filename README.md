@@ -1,6 +1,8 @@
 # commerce-app
 
 *Dashboard for managing products* 
+/dashboard
+/home
 
 # FE
 `cd client`
@@ -13,3 +15,4 @@
 `npm run start`
 
 # Image Hosting on Cloudinary
+Credentials not added
